@@ -15,10 +15,10 @@ class DeviceViewModel (
     val uiState: StateFlow<DeviceUiState> = _uiState.asStateFlow()
 
     init {
-        loadDevice()
+        loadDeviceInfo()
     }
 
-    fun loadDevice() {
+    fun loadDeviceInfo() {
         _uiState.update { it.copy(isLoading = true, error = null) }
 
         try {

@@ -11,6 +11,6 @@ class DeviceViewModelFactory: ViewModelProvider.Factory {
         val dataSource = DeviceDataSource()
         val repository = DeviceRepositoryImpl(dataSource)
         val useCase = GetDeviceInfoUseCase(repository)
-        return DeviceViewModel(useCase) as T
+        return DeviceViewModel(useCase)as T
     }
 }

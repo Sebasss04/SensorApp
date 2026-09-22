@@ -80,7 +80,7 @@ fun DeviceScreen(viewModel: DeviceViewModel) {
 
         Button(
             onClick = {
-                viewModel.loadDeviceInf()
+                viewModel.loadDeviceInfo()
             },
             modifier = Modifier.fillMaxWidth()
         ) {
