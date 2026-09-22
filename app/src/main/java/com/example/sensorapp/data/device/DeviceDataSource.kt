@@ -4,7 +4,7 @@ import android.os.Build
 import com.example.sensorapp.domain.model.DeviceInfo
 
 class DeviceDataSource {
-    fun getDeviceInfo(): DeviceInfo {
+    fun getDeviceInf(): DeviceInfo {
         return DeviceInfo(
             manufacturer = Build.MANUFACTURER,
             brand = Build.BRAND,

@@ -1,4 +1,7 @@
 package com.example.sensorapp.domain.repository
 
-class DeviceRepository {
+import com.example.sensorapp.domain.model.DeviceInfo
+
+interface DeviceRepository {
+    fun getDeviceInfo(): DeviceInfo
 }

@@ -1,4 +1,9 @@
 package com.example.sensorapp.domain.model
 
-class DeviceInfo {
-}
+data class DeviceInfo (
+    val manufacturer: String,
+    val brand: String,
+    val model: String,
+    val androidVersion: String,
+    val sdkVersion: Int
+)
