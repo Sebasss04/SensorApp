@@ -19,6 +19,9 @@ import com.example.sensorapp.presentation.device.DeviceViewModel
 import com.example.sensorapp.presentation.device.DeviceViewModelFactory
 import com.example.sensorapp.ui.theme.SensorAppTheme
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.sensorapp.presentation.Sensor.SensorScreen
+import com.example.sensorapp.presentation.Sensor.SensorViewModel
+import com.example.sensorapp.presentation.Sensor.SensorViewModelFactory
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,11 +30,13 @@ class MainActivity : ComponentActivity() {
         setContent {
             SensorAppTheme {
                 MaterialTheme{
-                    val viewModel: DeviceViewModel = viewModel(
+                    /*val viewModel: DeviceViewModel = viewModel(
                         factory = DeviceViewModelFactory()
-                    )
-                DeviceScreen(
-                    viewModel = viewModel
+                    )*/
+                    val sensorViewModel: SensorViewModel = viewModel(factory = SensorViewModelFactory( applicationContext ))
+                    SensorScreen(viewModel = sensorViewModel)
+                SensorScreen(
+                    viewModel = viewModel()
                     )
                 }
             }
